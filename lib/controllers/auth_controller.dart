@@ -20,7 +20,13 @@ import 'package:flutter/widgets.dart';
       checkAuthStatus();
     });
   }
-
+class AuthController extends GetxController {
+  final AuthService _authService = AuthService();
+  final StorageService _storage = Get.find<StorageService>();
+  final RxBool isLoading = false.obs;
+  final RxBool isPasswordVisible = false.obs;
+  final RxString errorMessage = ''.obs;
+  final RxBool isAuthenticated = false.obs;
   void checkAuthStatus() {
     final token = _storage.getToken();
     if (token != null) {
