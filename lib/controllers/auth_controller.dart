@@ -8,13 +8,7 @@ import 'package:todo_app/core/utils/notification_helper.dart';
 import 'package:todo_app/controllers/task_controller.dart';
 import 'package:flutter/widgets.dart';
 
-class AuthController extends GetxController {
-  final AuthService _authService = AuthService();
-  final StorageService _storage = Get.find<StorageService>();
-  final RxBool isLoading = false.obs;
-  final RxBool isPasswordVisible = false.obs;
-  final RxString errorMessage = ''.obs;
-  final RxBool isAuthenticated = false.obs;
+
 
   @override
   void onInit() {
