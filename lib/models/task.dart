@@ -13,15 +13,7 @@ class Task {
     required this.createdAt,
   });
 
-  factory Task.fromJson(Map<String, dynamic> json) {
-    return Task(
-      id: json['_id'],
-      title: json['title'],
-      completed: json['completed'] ?? false,
-      user: json['user'],
-      createdAt: DateTime.parse(json['createdAt']),
-    );
-  }
+  
 
   Map<String, dynamic> toJson() {
     return {
