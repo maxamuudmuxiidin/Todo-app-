@@ -33,7 +33,21 @@ class Task {
     };
   }
 
- 
+  Task copyWith({
+    String? id,
+    String? title,
+    bool? completed,
+    String? user,
+    DateTime? createdAt,
+  }) {
+    return Task(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      completed: completed ?? this.completed,
+      user: user ?? this.user,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
 
   @override
   bool operator ==(Object other) =>
